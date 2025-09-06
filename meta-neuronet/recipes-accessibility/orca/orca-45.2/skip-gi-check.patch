@@ -1,0 +1,10 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -100,7 +100,8 @@
+ AC_MSG_CHECKING([for python module gi])
+ $PYTHON -c "import gi" >/dev/null 2>&1
+ if test $? -ne 0; then
+-   AC_MSG_ERROR([Could not find python module: gi])
++   AC_MSG_WARN([Skipping gi check (Yocto will provide python3-pygobject runtime)])
+ fi
+
